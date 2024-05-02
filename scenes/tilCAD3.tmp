@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://gnw0efm5ba0h"]
+
+[ext_resource type="Script" path="res://Tile.gd" id="1_ud2sc"]
+[ext_resource type="Texture2D" uid="uid://82p2r3dpqmpg" path="res://assets/PC Computer - Minesweeper - General Sprites.png" id="2_7qhyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4rq7"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(14, 194, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxwm1"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(31, 194, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4gep"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(48, 194, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbwo4"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(99, 194, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8qv3"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(14, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjfyd"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(31, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asbqh"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(48, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu5sa"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(65, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pto0"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(82, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op3e4"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(99, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uooro"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(116, 211, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0o5v"]
+atlas = ExtResource("2_7qhyc")
+region = Rect2(133, 211, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqd2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4rq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxwm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4gep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbwo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8qv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjfyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asbqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu5sa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pto0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op3e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uooro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0o5v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_ud2sc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cqd2v")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.425554, 0.424834)
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
